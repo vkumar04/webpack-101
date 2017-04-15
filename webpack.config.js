@@ -16,6 +16,11 @@ module.exports = {
 					fallback: 'style-loader',
 					use: ['css-loader','sass-loader']
 				})
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: 'babel-loader'
 			}
 		]
 	},
@@ -30,10 +35,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: 'Webpack 101',
 			minify: {
-				collapseWhiteSpace: false
-			},
+				collapseWhiteSpace: true
+			}
+		}),
+		new HtmlWebpackPlugin({
+			title: 'Contact Page',
 			hash: true,
-			template: './src/index.ejs'
+			filename: 'contact.html',
+			template: './src/contact.html'
 		})
 	]
 }
