@@ -1,0 +1,16 @@
+{
+  "name": "webpack-101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vkrazy04/webpack-101.git",
+  "author": "Vick Kumar <vick.kumar19@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "dev": "webpack -d -w",
+    "prod": "webpack -p"
+  }
+}
